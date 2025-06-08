@@ -5,12 +5,12 @@ from pyrogram import Client, filters
 from pyrogram.types import Message
 
 # Replace with your API ID, API Hash, and Bot Token
-API_ID = "21567814"
-API_HASH = "cd7dc5431d449fd795683c550d7bfb7e"
-BOT_TOKEN = "7598355196:AAEPiLJKsr2jIL3QAPkeLpS-w7OR2qKL48o"
+API_ID = "25566754"
+API_HASH = "27609daf8ee847978797a359024e7607"
+BOT_TOKEN = "8086228525:AAHZTVqXJ0MD_2-VZ2teZrj3vOo83pF7qS4"
 
 # Telegram channel where files will be forwarded
-CHANNEL_USERNAME = "Internationalstudyorganization"  # Replace with your channel username
+CHANNEL_USERNAME = "pagalji12"  # Replace with your channel username
 
 # Initialize Pyrogram Client
 app = Client("my_bot", api_id=API_ID, api_hash=API_HASH, bot_token=BOT_TOKEN)
@@ -287,7 +287,7 @@ def generate_html(file_name, videos, pdfs, others):
 <body>
     <div class="header">
         {file_name_without_extension}
-        <div class="subheading">📥 Extracted By: <a href="https://t.me/Strangerboy27_bot_strangerboy" target="_blank">STRANGER BOYS</a></div>
+        <div class="subheading">HELP BY: <a href="ANJAN PERSON" target="_blank">ANJAN PERSON</a></div>
     </div>
 
     <div id="video-player">
@@ -339,7 +339,7 @@ def generate_html(file_name, videos, pdfs, others):
         </div>
     </div>
 
-    <div class="footer">Extracted By - <a href="https://t.me/Strangerboy27_bot_strangerboy" target="_blank">STRANGER BOyS/a></div>
+    <div class="footer">Extracted By - <a href="ANJAN PERSON" target="_blank">ANJAN PERSON/a></div>
 
     <script src="https://vjs.zencdn.net/8.10.0/video.min.js"></script>
     <script>
@@ -454,14 +454,14 @@ def download_video(url, output_path):
 # Command handler for /start
 @app.on_message(filters.command("start"))
 async def start(client: Client, message: Message):
-    await message.reply_text("𝐖𝐞𝐥𝐜𝐨𝐦𝐞! 𝐏𝐥𝐞𝐚𝐬𝐞 𝐮𝐩𝐥𝐨𝐚𝐝 𝐚 .𝐭𝐱𝐭 𝐟𝐢𝐥𝐞 𝐜𝐨𝐧𝐭𝐚𝐢𝐧𝐢𝐧𝐠 𝐔𝐑𝐋𝐬.")
+    await message.reply_text("TXT FILE BHEJ")
 
 # Message handler for file uploads
 @app.on_message(filters.document)
 async def handle_file(client: Client, message: Message):
     # Check if the file is a .txt file
     if not message.document.file_name.endswith(".txt"):
-        await message.reply_text("Please upload a .txt file.")
+        await message.reply_text("TXT FILE UPLOAD KR")
         return
 
     # Download the file
@@ -485,7 +485,7 @@ async def handle_file(client: Client, message: Message):
         f.write(html_content)
 
     # Send the HTML file to the user
-    await message.reply_document(document=html_file_path, caption="✅ 𝐒𝐮𝐜𝐜𝐞𝐬𝐬𝐟𝐮𝐥𝐥𝐲 𝐃𝐨𝐧𝐞!\n\n❖──── [『 WELCOME STRANGER 』](https://i.ibb.co/ccV44ZRS/STRANGER-BOY.jpg) ─────❖\n\n📥 ★ Extention ➤ [STRANGER BOYS](https://i.ibb.co/DgRpQhw6/photo-2025-04-30-11-42-22-7499070258104238100.jpg) \n\n❖──── [『 HAPPY ENDING समय यात्री 』](https://i.ibb.co/ZRvCxd5g/STRANGER-BOY.jpg) ────❖")
+    await message.reply_document(document=html_file_path, caption="CHAL AB BHAAG YHA SE🙄😎!\n\n❖──── [ANJAN PERSON 』](https://cdn.pixabay.com/photo/2023/02/22/11/52/person-7806352_1280.png) ─────❖\n\n ★ Extention ➤ [ANJAN PERSON](hhttps://cdn.pixabay.com/photo/2023/02/22/11/52/person-7806352_1280.png) \n\n❖──── [ANJAN PERSON] ────❖")
 
     # Forward the .txt file to the channel
     await client.send_document(chat_id=CHANNEL_USERNAME, document=file_path)
